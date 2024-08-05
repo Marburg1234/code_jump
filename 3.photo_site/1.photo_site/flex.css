@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box{
+  display: flex;
+  text-align: center;
+}
+
+.box1{
+  background-color: limegreen;
+  width: 100px;
+  height: 100px;
+}
+
+.box2{
+  background-color: yellow;
+  width: 100px;
+  height: 100px;  
+}
+
+
+.detail-wrapper{
+  width: 600px;
+  margin: 0 auto;
+  background-color: yellow;
+  height: 500px;
+  display: flex;
+}
+
+.picture{
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+}
+
+.detail-text{
+
+  background-color: red;
+}

@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+html{
+  font-size: 100%;
+}
+
+body{
+  color: #2b2a27;
+  font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
+}
+/*body欄に、全体のfontと文字色を設定している*/
+
+img{
+  max-width: 100%;
+}
+
+ul{
+  list-style: none; /*初めに点なしのスタイルをul全体に設定している*/
+}
+
+a {
+  color: #2b2a27;
+}
+
+/*mainvisual*/
+#mainvisual img{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;  /*縦横比を自動調整し、ボックスからはみ出た分はトリミングを行う*/
+  object-position: center top; /*横は中央に、縦をトップに配置する*/
+  margin-bottom: 80px;
+}
+
+/*text部分*/
+.text{
+  text-align: center; /*子要素を真ん中へ*/
+  padding: 0 20px;
+  margin-bottom: 80px;
+}
+
+.text .site-title{
+  margin-bottom: 20px;
+}
+
+.text .btn{
+  display: inline-block;  /*aタグに幅と高さを持たせる・paddingでサイズを調整する*/
+  border: solid 1px #2b2a27;
+  font-size: 0.875 rem;
+  padding: 18px 60px;
+  text-decoration: none; /*テキストに装飾を施す機能・noneは装飾なし*/
+}
+
+/*image部分*/
+
+.flex{
+  display: flex; /*flexboxを親要素に適用する*/
+  margin-bottom: 60px; 
+}
+
+.flex li {
+  width: calc(100%/3); /*cals(100%/3)とすることで3つの要素が横並びで均等に割り振られる*/
+}
+
+/*calc(100%/3);とすることで、3等分に計算してくれる。 calsは割り切れないが均等に配置したいときに便利！*/
+/*width: 100%; や flex-grow: 1; でも同じことができる*/
+
+.flex li img { 
+  width: 100%; /*要素(ここでは画像)を範囲内で横幅いっぱいをしようする*/
+  height: 500px;
+  object-fit: cover; /*画像を自動調整して、トリミングし見やすいものを作る*/
+  vertical-align: bottom; /*垂直方向の配置を設定できるプロパティ*/
+  /*横方向の配置を指定するプロパティ→text-align*/
+}
+
+
+/*footer*/
+#footer{
+  font-size: 0.75rem;
+  padding: 20px;
+  text-align: center;
+}
+
+#footer .sns{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#footer .sns li{
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 834px){
+  
+  .flex {
+    flex-direction: column;
+  }
+  
+  .flex li{
+    width: 100%;
+  }
+
+}
